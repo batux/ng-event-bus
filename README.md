@@ -47,7 +47,7 @@ var searchBoxController = function($scope, eventBus) {
 Then, we can use a concrete object of event bus that denoted 'eventBus' as a variable.
 
 
-In this example, we fired an event message globally, It uses $rootScope object. 
+In this example, we fired an event message globally, It uses $rootScope object. 'filter-list' is the topic name.
 
 ```javascript
 var searchBoxController = function($scope, eventBus) {
@@ -67,5 +67,8 @@ var searchBoxController = function($scope, eventBus) {
 angularEventBusLabModule.controller('searchBoxController', ['$scope', 'eventBus', searchBoxController]);
 ```
 
+In this example, we subscribed to a special topic which we interested in. 'filter-list' is the topic name.
 
-
+```javascript
+self.eventBus.subscribeToEvent('filter-list', $scope, self.filterItems);
+```
