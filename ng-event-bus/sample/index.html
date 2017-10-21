@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EventBus JS Sample</title>
+</head>
+<body>
+
+	<div ng-app="angularlab">
+	
+		<div ng-controller="searchBoxController">
+			<input type="text" placeholder="search.." ng-model="typedText" ng-change="textChange()" />
+		</div>
+
+		<div ng-controller="listboxController">
+			<ol>
+				<li ng-repeat="item in filteredItems">{{ item }}</li>
+			</ol>
+		</div>
+
+	</div>
+
+	<script src="angular.min.js"></script>
+	<script src="ng-event-bus.js"></script>
+	<script src="sample_app.js"></script>
+
+</body>
+</html>
